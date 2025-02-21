@@ -1,0 +1,46 @@
+{
+  "name": "test-e2e-autoforce",
+  "version": "1.0.0",
+  "keywords": [
+    "automation",
+    "cypress",
+    "test",
+    "e2e",
+    "autoforce"
+  ],
+  "scripts": {
+    "open:test": "yarn cypress open --e2e",
+    "run:test": "yarn report:clean && yarn cypress run --browser chrome",
+    "linter:code:check": "standard -v | snazzy",
+    "linter:code:fix": "standard -v --fix | snazzy",
+    "linter:docs:check": "prettier --check ./cypress/support/index.d.ts",
+    "linter:docs:fix": "prettier --write ./cypress/support/index.d.ts"
+  },
+  "standard": {
+    "globals": [
+      "cy",
+      "cypress",
+      "Cypress",
+      "it",
+      "describe",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "expect",
+      "assert",
+      "context",
+      "localStorage"
+    ]
+  },
+  "dependencies": {
+    "cypress": "12.17.3",
+    "cypress-plugin-xhr-toggle": "1.0.0",
+    "faker-br": "^0.4.1"
+  },
+  "devDependencies": {
+    "prettier": "3.0.0",
+    "snazzy": "9.0.0",
+    "standard": "17.1.0"
+  }
+}
